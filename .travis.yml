@@ -65,7 +65,8 @@ script:
   # run build scripts against site1
   - cd /var/www/site1
   - drush dvr start
-  - drush si minimal --y
+  # - drush si minimal --y
+  - drush si standard --y
   # run included recipes
   - drush cook --y core_performance
   - drush cook --y simple_performance_pack
