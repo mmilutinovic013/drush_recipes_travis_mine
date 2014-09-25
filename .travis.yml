@@ -66,7 +66,8 @@ script:
   - cd /var/www/site1
   - drush dvr start
   # - drush si minimal --y
-  - drush si standard --y
+  - drush site-install -y --db-url=mysql://elmslndfltdbo:@localhost/ --db-su='root' --db-su-pw='' 
+  - drush si standard --db-url=mysql --dbsu --dbsupw --site-name="Your New Site"
   # run included recipes
   - drush cook --y core_performance
   - drush cook --y simple_performance_pack
