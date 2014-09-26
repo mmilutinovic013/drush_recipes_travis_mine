@@ -81,7 +81,7 @@ script:
   - drush cook --y dr_safe_upgrade
   # build site2 via recipes
   - cd /var/www/site2
-  - drush cook dr_si,standard_baseline --y --mlt-profile=standard --mlt-db-url=mysql://root@localhost/travisdb --mlt-site-mail=default@site.com --mlt-site-name="Site2"
+  - drush cook dr_si,standard_baseline --y --mlt-profile=standard --mlt-db-url=mysql://root@localhost/travisdb --mlt-sites-mail=default --mlt-site-name="Site2"
   # test some other commands
   - drush ddt --test-run
   - drush dvr watch
