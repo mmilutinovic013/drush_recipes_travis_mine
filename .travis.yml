@@ -2,9 +2,9 @@ language: php
 
 php:
   - 5.3
-  - 5.4
-  - 5.5
-  - hhvm
+  #- 5.4
+  #- 5.5
+  #- hhvm
 
 matrix:
   allow-failures:
@@ -84,6 +84,7 @@ script:
   - cd /var/www/site2
   - drush cook dr_si,standard_baseline --y --mlt-profile=standard --mlt-db-url=mysql://root@localhost/travisdb --mlt-site-name="Site2"
   # test some other commands
+  - drush ddt --test-run --y
   - drush ddt --test-run
   - drush dvr watch
   - drush dvr delete --command=si
