@@ -96,7 +96,7 @@ script:
   - drush dvr save --test-run
   - drush dvr delete --y
   - drush dvr watch
-  - drush dvr stop --x --y
+  - drush dvr stop --test-run
 after_script:
   - drush dlr
 
