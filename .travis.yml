@@ -69,7 +69,7 @@ script:
   # run included recipes
   - drush cook --y core_performance
   - drush cook --y simple_performance_pack
-  - drush cook --y dr_core_settings
+  - drush cook --y dr_security_core_settings
   - drush cook --y dr_security
   - drush cook --y dr_security_owasp
   - drush cook --y dr_security_corp
@@ -82,7 +82,7 @@ script:
   - drush cook --y dr_safe_upgrade
   # build site2 via recipes
   - cd /var/www/site2
-  - drush cook dr_si,standard_baseline --y --mlt-profile=standard --mlt-db-url=mysql://root@localhost/travisdb --mlt-sites-mail=default --mlt-site-name="Site2"
+  - drush cook dr_si,standard_baseline --y --mlt-profile=standard --mlt-db-url=mysql://root@localhost/travisdb --mlt-site-name="Site2"
   # test some other commands
   - drush ddt --test-run
   - drush dvr watch
