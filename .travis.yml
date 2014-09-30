@@ -85,7 +85,6 @@ script:
   - drush cook dr_si,standard_baseline --y --mlt-profile=standard --mlt-db-url=mysql://root@localhost/travisdb --mlt-site-name="Site2"
   # test some other commands
   - drush ddt --test-run --y
-  - drush ddt --test-run
   - drush dvr watch
   - drush dvr delete --command=si
   - drush dvr watch
