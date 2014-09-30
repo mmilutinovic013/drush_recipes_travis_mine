@@ -97,7 +97,16 @@ script:
   - drush dvr delete --y
   - drush dvr watch
   #first test
+  #should fail
   - drush dvr stop --test-run
+  #remote tests
+  - drush drurl http://drush.recipes/recipes.xml?id=6 --y #download
+  - drush cook travis_test_recipe --y
+  - drush cook http://drush.recipes/sites/default/files/recipes/drecipe_uploads/travis_test_recipe.drecipe --y
+  - drush cook ~/.drush/drush_recipes/drecipes/baseline_sites/standard_baseline.drecipe --y
+  - drush cook core_above_core --simple-uncook --y
+  #- dr-locations
+
 after_script:
   - drush dlr
 
