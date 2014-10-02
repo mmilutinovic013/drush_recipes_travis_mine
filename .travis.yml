@@ -107,7 +107,9 @@ script:
   - drush cook http://drush.recipes/sites/default/files/recipes/drecipe_uploads/travis_test_recipe.drecipe --y
   - drush cook ~/.drush/drush_recipes/drecipes/baseline_sites/standard_baseline.drecipe --y
   - drush cook core_above_core --simple-uncook --y
-  - #dr-locations
+  #locations
+  #-add drush dr-locations
+  #to do: target diffing drecipes
 
 after_script:
   - drush dlr
